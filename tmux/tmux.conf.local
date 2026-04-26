@@ -83,7 +83,7 @@ tmux_conf_24b_colour=true
 #   - tmux_conf_theme_mouse
 #   - tmux_conf_theme_root
 #   - tmux_conf_theme_synchronized
-tmux_conf_theme=enabled
+tmux_conf_theme=disabled
 
 # default theme
 tmux_conf_theme_colour_1="#1e2030"    # dark gray -> TokyoNight bg_dark
@@ -455,6 +455,9 @@ set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @continuum-restore 'on'
 
+set -g @plugin 'egel/tmux-gruvbox'
+set -g @tmux-gruvbox 'dark'
+
 
 # -- custom variables ----------------------------------------------------------
 
@@ -509,3 +512,6 @@ set -g @continuum-restore 'on'
 # "$@"
 # # /!\ do not remove the previous line
 # #     do not write below this line
+
+run '~/.tmux/plugins/tpm/tpm'
+run-shell ~/.tmux/plugins/tmux-gruvbox/gruvbox-tpm.tmux
